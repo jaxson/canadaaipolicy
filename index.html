@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Getting Up to Speed on AI Policy — A Curated Reading List by Jaxson Khan</title>
+<meta name="description" content="A curated reading list for people who want to understand AI policy. Drawn from the PPG2012H course at the Munk School of Global Affairs & Public Policy, curated by Jaxson Khan.">
+<meta name="author" content="Jaxson Khan">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Getting Up to Speed on AI Policy">
+<meta property="og:description" content="A curated reading list for people who want to understand AI policy. Drawn from the PPG2012H course at the Munk School, curated by Jaxson Khan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://canadaaipolicy.com">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #FAF8F3;
+    --text: #1C1B18;
+    --text-muted: #5A564E;
+    --meta: #8A847A;
+    --accent: #6B2C2C;
+    --accent-hover: #8B3838;
+    --rule: #D9D3C5;
+    --card-bg: #F4EFE4;
+    --tag-bg: #EDE7D8;
+    --new-bg: #6B2C2C;
+    --new-text: #FAF8F3;
+
+    --font-display: 'EB Garamond', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+    --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --col: 720px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 19px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: var(--col);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* HEADER */
+  header.site-header {
+    padding: 80px 0 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 48px;
+  }
+  .eyebrow {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--meta);
+    margin-bottom: 20px;
+  }
+  h1.site-title {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    color: var(--text);
+  }
+  .tagline {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 0 auto 28px;
+    line-height: 1.5;
+  }
+  .byline {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--meta);
+    letter-spacing: 0.02em;
+  }
+  .byline a {
+    color: var(--meta);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .byline a:hover { color: var(--accent); }
+
+  /* TABLE OF CONTENTS */
+  nav.toc {
+    margin: 56px 0 72px;
+    padding: 28px 32px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    background: transparent;
+  }
+  nav.toc .toc-label {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: block;
+  }
+  nav.toc ol {
+    list-style: none;
+    counter-reset: toc-counter;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 28px;
+  }
+  nav.toc li {
+    counter-increment: toc-counter;
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.4;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  nav.toc li::before {
+    content: counter(toc-counter, decimal-leading-zero);
+    font-family: var(--font-ui);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--meta);
+    letter-spacing: 0.08em;
+    min-width: 20px;
+  }
+  nav.toc a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  nav.toc a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  @media (max-width: 600px) {
+    nav.toc { padding: 22px 20px; margin: 40px 0 56px; }
+    nav.toc ol { grid-template-columns: 1fr; gap: 10px; }
+    nav.toc li { font-size: 16px; }
+  }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    font-family: var(--font-ui);
+    font-size: 13px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 14px 18px;
+    margin: 40px 0 56px;
+    letter-spacing: 0.01em;
+  }
+  .disclaimer strong {
+    font-family: var(--font-ui);
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 11px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* FEATURED CALLOUT (Sovereign by Design) */
+  .featured-callout {
+    background: var(--text);
+    color: var(--bg);
+    padding: 44px 40px;
+    border-radius: 2px;
+    margin: 72px 0 48px;
+  }
+  .featured-callout .label {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #C9A87A;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+  .featured-callout h3 {
+    font-family: var(--font-display);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+  .featured-callout p {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: #D9D3C5;
+    margin: 0 0 22px;
+  }
+  .featured-callout a.cta {
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--bg);
+    text-decoration: none;
+    border-bottom: 1px solid #C9A87A;
+    padding-bottom: 2px;
+    display: inline-block;
+  }
+  .featured-callout a.cta:hover {
+    border-bottom-color: var(--bg);
+  }
+
+  /* INTRO */
+  section.intro {
+    margin-bottom: 72px;
+  }
+  section.intro p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin: 0 0 20px;
+  }
+  section.intro p:first-of-type::first-letter {
+    font-family: var(--font-display);
+    font-size: 64px;
+    float: left;
+    line-height: 0.9;
+    padding: 8px 10px 0 0;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* SECTION HEADINGS */
+  h2.section-title {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.2;
+    margin: 72px 0 12px;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  h2.section-title .num {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .section-blurb {
+    font-family: var(--font-body);
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 0 32px;
+    max-width: 620px;
+  }
+  .section-rule {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 56px 0 0;
+  }
+
+  /* READING ITEMS */
+  .reading {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .reading:last-child { border-bottom: none; }
+  .reading-title {
+    font-family: var(--font-display);
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 0 0 6px;
+  }
+  .reading-title a {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    transition: color 0.15s ease;
+  }
+  .reading-title a:hover {
+    color: var(--accent);
+  }
+  .reading-blurb {
+    font-family: var(--font-body);
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 0 10px;
+  }
+  .reading-meta {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--meta);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  .tag {
+    background: var(--tag-bg);
+    padding: 3px 8px;
+    border-radius: 2px;
+    font-weight: 500;
+    color: var(--text-muted);
+  }
+  .tag-new {
+    background: var(--new-bg);
+    color: var(--new-text);
+  }
+  .meta-sep {
+    color: var(--rule);
+  }
+
+  /* START HERE BLOCK */
+  section.start-here {
+    background: var(--card-bg);
+    border-left: 3px solid var(--accent);
+    padding: 36px 36px 28px;
+    margin: 0 0 72px;
+    border-radius: 2px;
+  }
+  section.start-here h2 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 8px;
+    color: var(--accent);
+  }
+  section.start-here .sub {
+    font-family: var(--font-body);
+    font-style: italic;
+    color: var(--text-muted);
+    margin: 0 0 24px;
+    font-size: 17px;
+  }
+  section.start-here .reading {
+    border-bottom: 1px solid rgba(107, 44, 44, 0.15);
+  }
+  section.start-here .reading:last-child { border-bottom: none; }
+
+  /* BOOKS SECTION */
+  .hero-book {
+    background: var(--card-bg);
+    border: 1px solid var(--rule);
+    padding: 28px 32px;
+    margin: 0 0 32px;
+    border-radius: 2px;
+  }
+  .hero-book .label {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .hero-book h3 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 6px;
+    font-style: italic;
+  }
+  .hero-book .author {
+    font-family: var(--font-body);
+    color: var(--text-muted);
+    margin: 0 0 12px;
+  }
+  .hero-book p {
+    margin: 0 0 16px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .hero-book .links {
+    font-family: var(--font-ui);
+    font-size: 13px;
+  }
+  .hero-book .links a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    margin-right: 18px;
+  }
+  .books-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .book-card {
+    padding: 20px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .book-card h4 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    margin: 0 0 4px;
+    line-height: 1.2;
+  }
+  .book-card .author {
+    font-family: var(--font-body);
+    color: var(--text-muted);
+    font-size: 15px;
+    margin: 0 0 10px;
+  }
+  .book-card .links {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .book-card .links a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--rule);
+  }
+  .book-card .links a:hover { border-bottom-color: var(--accent); }
+
+  /* ABOUT + SYLLABUS + CONTACT */
+  section.about {
+    margin: 96px 0 0;
+    padding: 48px 0 0;
+    border-top: 1px solid var(--rule);
+  }
+  section.about h2 {
+    font-family: var(--font-display);
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 16px;
+  }
+  section.about p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 16px;
+    color: var(--text);
+  }
+  section.about a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+
+  .syllabus-link {
+    background: var(--card-bg);
+    padding: 24px 28px;
+    border-radius: 2px;
+    margin: 48px 0;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .syllabus-link strong {
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+  .syllabus-link a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  .contact {
+    margin: 48px 0;
+    font-size: 17px;
+  }
+  .contact a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+
+  /* FOOTER */
+  footer.site-footer {
+    margin-top: 80px;
+    padding: 40px 0 60px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-ui);
+    font-size: 13px;
+    color: var(--meta);
+    text-align: center;
+  }
+  footer.site-footer p { margin: 4px 0; }
+  footer.site-footer a { color: var(--meta); }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    header.site-header { padding: 48px 0 32px; }
+    h1.site-title { font-size: 38px; }
+    .tagline { font-size: 17px; }
+    h2.section-title { font-size: 28px; margin-top: 56px; }
+    .reading-title { font-size: 20px; }
+    section.start-here { padding: 24px 20px; }
+    section.start-here h2 { font-size: 24px; }
+    .hero-book { padding: 22px; }
+    .hero-book h3 { font-size: 24px; }
+    .books-grid { grid-template-columns: 1fr; }
+    section.intro p:first-of-type::first-letter {
+      font-size: 52px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header class="site-header">
+  <div class="eyebrow">A Curated Reading List</div>
+  <h1 class="site-title">Getting Up to Speed on AI Policy</h1>
+  <p class="tagline">For people who want to think clearly about AI &mdash; without a technical background or a hundred hours to spare.</p>
+  <p class="byline">Curated by <a href="https://jaxsonkhan.com" target="_blank" rel="noopener">Jaxson Khan</a> &middot; Senior Fellow, <a href="https://munkschool.utoronto.ca" target="_blank" rel="noopener">Munk School of Global Affairs &amp; Public Policy</a></p>
+</header>
+
+<main>
+
+<div class="disclaimer">
+  <strong>A Canadian perspective</strong>
+  This list is curated from a Canadian vantage point. It reflects the concerns, institutions, and policy debates that matter most for Canadian public servants, executives, and citizens &mdash; and leans toward Canadian authors, cases, and sources where they&rsquo;re the most useful available. It&rsquo;s meant to be broadly useful to anyone getting up to speed on AI policy, but it isn&rsquo;t neutral, and it doesn&rsquo;t pretend to be.
+</div>
+
+<section class="intro">
+  <p>The gap between how fast AI is moving and how well most of us understand it keeps growing. If you&rsquo;re a policy advisor, executive, journalist, or curious citizen, you probably don&rsquo;t need another breathless take. You need a map &mdash; a curated set of things worth reading, watching, and listening to that will actually help you think.</p>
+
+  <p>This list is built from the reading list of <a href="https://github.com/jaxson/ai-policy-course" target="_blank" rel="noopener"><em>PPG2012H: Applied AI Systems and Governance</em></a>, the master&rsquo;s course I teach at the University of Toronto&rsquo;s Munk School of Global Affairs &amp; Public Policy. It&rsquo;s organized into six themes &mdash; from how the technology actually works, to the global supply chain, safety, regulation, and where Canada goes next.</p>
+
+  <p>You don&rsquo;t need to read everything. If you have an hour, start with the three essentials below. If you have a weekend, pick a theme that interests you. If you have a month, treat it as a syllabus. Everything here is free to access or available through a library.</p>
+
+  <p>One caveat: I don&rsquo;t necessarily agree with every perspective on this list. Some of these pieces disagree sharply with each other &mdash; and with me. That&rsquo;s the point. The goal isn&rsquo;t to hand you a consensus view but to give you the strongest versions of the arguments you&rsquo;ll need to wrestle with if you&rsquo;re going to think seriously about AI policy.</p>
+</section>
+
+<section class="start-here" id="start-here">
+  <h2>Start Here</h2>
+  <p class="sub">Three essentials. One article, one video, one book. If you only have an hour, begin here.</p>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.understandingai.org/p/large-language-models-explained-with" target="_blank" rel="noopener">Large Language Models, Explained With a Minimum of Math and Jargon</a></h3>
+    <p class="reading-blurb">The clearest plain-English explanation of how today&rsquo;s AI systems actually work. Read this first and everything else gets easier.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Understanding AI &middot; Tim Lee &amp; Sean Trott</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~30 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank" rel="noopener">But what is a Neural Network?</a></h3>
+    <p class="reading-blurb">3Blue1Brown&rsquo;s visual explainer of how neural networks actually work. The clearest 20 minutes of video on the subject &mdash; no math background required.</p>
+    <div class="reading-meta">
+      <span class="tag">Video</span>
+      <span>3Blue1Brown &middot; Grant Sanderson</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~20 min watch</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.amazon.ca/Co-Intelligence-Living-Working-Ethan-Mollick/dp/059371671X" target="_blank" rel="noopener">Co-Intelligence</a></h3>
+    <p class="reading-blurb">The single most useful book on what AI means for your work right now. Short, practical, and not doomy.</p>
+    <div class="reading-meta">
+      <span class="tag">Book</span>
+      <span>Ethan Mollick &middot; The Wharton School</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~5 hr read</span>
+    </div>
+  </article>
+</section>
+
+<!-- TABLE OF CONTENTS -->
+<nav class="toc" aria-label="Themes">
+  <span class="toc-label">The Seven Themes</span>
+  <ol>
+    <li><a href="#foundations">Foundations: What AI Is &amp; How It Works</a></li>
+    <li><a href="#supply-chain">The Global AI Supply Chain</a></li>
+    <li><a href="#practice">AI in Practice: Transformation, Responsibility &amp; Equity</a></li>
+    <li><a href="#safety">Safety, Security &amp; Geopolitics</a></li>
+    <li><a href="#law">Law, Regulation &amp; Global Governance</a></li>
+    <li><a href="#canada">Canada&rsquo;s AI Policy &amp; Digital Sovereignty</a></li>
+    <li><a href="#road-ahead">The Road Ahead</a></li>
+  </ol>
+</nav>
+
+<!-- THEME 1 -->
+<section id="foundations">
+  <h2 class="section-title"><span class="num">Theme 01</span>Foundations: What AI Is and How It Works</h2>
+  <p class="section-blurb">Before you can have an opinion on AI policy, you need a working mental model of what these systems actually are. These readings build that foundation without demanding a technical background.</p>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.deeplearning.ai/courses/generative-ai-for-everyone/" target="_blank" rel="noopener">Generative AI for Everyone</a></h3>
+    <p class="reading-blurb">Andrew Ng&rsquo;s free course &mdash; the most trusted on-ramp to generative AI for non-technical learners.</p>
+    <div class="reading-meta">
+      <span class="tag">Course</span>
+      <span>DeepLearning.AI</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~6 hr course</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://cifar.ca/ai/destinationai/" target="_blank" rel="noopener">Destination AI</a></h3>
+    <p class="reading-blurb">CIFAR&rsquo;s free Canadian-made AI primer. Strong public-interest framing.</p>
+    <div class="reading-meta">
+      <span class="tag">Course</span>
+      <span>CIFAR</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~3 hr course</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.coursera.org/articles/history-of-ai" target="_blank" rel="noopener">The History of AI: A Timeline</a></h3>
+    <p class="reading-blurb">A compact overview of where the field came from &mdash; useful context for understanding why the current moment is different.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Coursera</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~12 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need</a></h3>
+    <p class="reading-blurb">The 2017 paper that introduced the transformer architecture &mdash; the foundation of every modern LLM. Technical, but worth skimming to see the source.</p>
+    <div class="reading-meta">
+      <span class="tag">Paper</span>
+      <span>Vaswani et al. &middot; Google Brain</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~45 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai/gc-ai-strategy-overview.html" target="_blank" rel="noopener">Canadian AI Strategy for the Public Service</a></h3>
+    <p class="reading-blurb">The federal government&rsquo;s official strategy for how AI will be used across public service.</p>
+    <div class="reading-meta">
+      <span class="tag">Policy</span>
+      <span>Government of Canada</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~15 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://ised-isde.canada.ca/site/ai-strategy/en" target="_blank" rel="noopener">Pan-Canadian AI Strategy</a></h3>
+    <p class="reading-blurb">Canada&rsquo;s national AI strategy &mdash; the broader framework that the sovereign compute strategy sits within.</p>
+    <div class="reading-meta">
+      <span class="tag">Policy</span>
+      <span>ISED</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~10 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://techcrunch.com/2025/08/14/cohere-hits-a-6-8b-valuation-as-investors-amd-nvidia-and-salesforce-double-down/" target="_blank" rel="noopener">Cohere Hits a $6.8B Valuation</a></h3>
+    <p class="reading-blurb">A data point on Canada&rsquo;s only frontier-scale AI company &mdash; useful for thinking about what a domestic ecosystem looks like.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>TechCrunch</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~6 min read</span>
+    </div>
+  </article>
+</section>
+
+<hr class="section-rule">
+
+<!-- THEME 2 -->
+<section id="supply-chain">
+  <h2 class="section-title"><span class="num">Theme 02</span>The Global AI Supply Chain</h2>
+  <p class="section-blurb">AI doesn&rsquo;t run on ideas &mdash; it runs on chips, data, compute, and electricity. Whoever controls the supply chain shapes the geopolitics. This is where most of the real policy action is.</p>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.governance.ai/analysis/computing-power-and-the-governance-of-ai" target="_blank" rel="noopener">Computing Power and the Governance of AI</a></h3>
+    <p class="reading-blurb">The foundational paper on why compute &mdash; not data or models &mdash; is the most governable input to AI systems.</p>
+    <div class="reading-meta">
+      <span class="tag">Paper</span>
+      <span>GovAI</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~60 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.noahpinion.blog/p/americas-semiconductor-policy-is" target="_blank" rel="noopener">America&rsquo;s Semiconductor Policy Is Working</a></h3>
+    <p class="reading-blurb">Noah Smith on the CHIPS Act and why industrial policy for semiconductors is back.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Noahpinion</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~15 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.noahpinion.blog/p/should-we-worry-about-ais-circular" target="_blank" rel="noopener">Should We Worry About AI&rsquo;s Circular Deals?</a></h3>
+    <p class="reading-blurb">On the tangled web of investments between chip makers, cloud providers, and model labs &mdash; and what it means for competition policy.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Noahpinion</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~12 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://opencanada.org/canadas-sovereign-ai-compute-gap-why-were-still-treating-a-strategic-asset-as-a-service/" target="_blank" rel="noopener">Canada&rsquo;s Sovereign AI Compute Gap</a></h3>
+    <p class="reading-blurb">A sharp 2026 critique arguing that Canada is still treating compute as a service to be rented rather than a strategic asset to be built. Relevant for anyone following Canadian industrial policy.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>Open Canada</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~15 min read</span>
+    </div>
+  </article>
+</section>
+
+<hr class="section-rule">
+
+<!-- THEME 3 -->
+<section id="practice">
+  <h2 class="section-title"><span class="num">Theme 03</span>AI in Practice: Transformation, Responsibility &amp; Equity</h2>
+  <p class="section-blurb">What does it actually look like to deploy AI inside real organizations? This theme moves from case studies to the harder questions of fairness, accountability, and responsible use.</p>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://monoskop.org/images/1/1f/Wiener_Norbert_God_and_Golem_A_Comment_on_Certain_Points_where_Cybernetics_Impinges_on_Religion.pdf" target="_blank" rel="noopener">God and Golem, Inc.</a></h3>
+    <p class="reading-blurb">Norbert Wiener&rsquo;s 1964 classic on the ethics of automation. Sixty years old and still the most prescient thing you can read on this.</p>
+    <div class="reading-meta">
+      <span class="tag">Book</span>
+      <span>Norbert Wiener &middot; MIT Press</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~90 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.rbc.com/our-impact/technology/artificial-intelligence.html" target="_blank" rel="noopener">AI at RBC</a></h3>
+    <p class="reading-blurb">How Canada&rsquo;s largest bank thinks about AI &mdash; useful as a Canadian enterprise case study.</p>
+    <div class="reading-meta">
+      <span class="tag">Case</span>
+      <span>RBC</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~10 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.ted.com/talks/kathryn_hume_what_henry_ford_can_teach_us_about_ai" target="_blank" rel="noopener">What Henry Ford Can Teach Us About AI</a></h3>
+    <p class="reading-blurb">Kathryn Hume on the organizational &mdash; not technical &mdash; side of AI adoption. One of the best TED talks on the topic.</p>
+    <div class="reading-meta">
+      <span class="tag">Video</span>
+      <span>TED</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~14 min watch</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.mobilelive.ai/podcast/balancing-people-processes-and-artificial-intelligence" target="_blank" rel="noopener">Behind the Growth &mdash; Kathryn Hume</a></h3>
+    <p class="reading-blurb">A longer conversation with Hume on balancing people, processes, and AI inside large organizations.</p>
+    <div class="reading-meta">
+      <span class="tag">Podcast</span>
+      <span>MobileLive</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~45 min listen</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.superdatascience.com/podcast/sds-809-agentic-ai-with-shingai-manjengwa" target="_blank" rel="noopener">Agentic AI with Shingai Manjengwa</a></h3>
+    <p class="reading-blurb">A practical, accessible conversation on where AI agents are today and what they can actually do.</p>
+    <div class="reading-meta">
+      <span class="tag">Podcast</span>
+      <span>Super Data Science</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~60 min listen</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai.html" target="_blank" rel="noopener">Responsible Use of AI in Government</a></h3>
+    <p class="reading-blurb">Canada&rsquo;s framework for responsible AI in the public sector &mdash; the rulebook that applies to most federal AI projects.</p>
+    <div class="reading-meta">
+      <span class="tag">Policy</span>
+      <span>Government of Canada</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~20 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.canada.ca/en/government/system/digital-government/digital-government-innovations/responsible-use-ai/guide-use-generative-ai.html" target="_blank" rel="noopener">Guide on the Use of Generative AI in Government</a></h3>
+    <p class="reading-blurb">Practical guidance for public servants using generative AI tools &mdash; a model document other governments are now copying.</p>
+    <div class="reading-meta">
+      <span class="tag">Policy</span>
+      <span>Government of Canada</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~15 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://journals.sagepub.com/doi/10.1177/20539517251340603" target="_blank" rel="noopener">The Ethics of AI Value Chains</a></h3>
+    <p class="reading-blurb">Blair Attard-Frost and David Gray Widder argue that AI ethics has to look beyond models and outputs to the full value chain &mdash; data labour, compute, supply, deployment. A rigorous, integrative framework for anyone thinking about AI responsibility at a systems level.</p>
+    <div class="reading-meta">
+      <span class="tag">Paper</span>
+      <span>Big Data &amp; Society &middot; Attard-Frost &amp; Widder</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~60 min read</span>
+    </div>
+  </article>
+</section>
+
+<hr class="section-rule">
+
+<!-- THEME 4 -->
+<section id="safety">
+  <h2 class="section-title"><span class="num">Theme 04</span>Safety, Security &amp; Geopolitics</h2>
+  <p class="section-blurb">The serious conversation about frontier risk &mdash; and the serious conversation about AI in national security and disinformation &mdash; are two sides of the same coin. Both are now live policy questions.</p>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.youtube.com/watch?v=aAPpQC-3EyE" target="_blank" rel="noopener">Dario Amodei on AI Risk</a></h3>
+    <p class="reading-blurb">The Anthropic CEO on why the company building frontier AI thinks guardrails are urgent.</p>
+    <div class="reading-meta">
+      <span class="tag">Video</span>
+      <span>CBS News</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~20 min watch</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://ar5iv.labs.arxiv.org/html/2212.08073" target="_blank" rel="noopener">Constitutional AI</a></h3>
+    <p class="reading-blurb">Anthropic&rsquo;s influential paper on training AI systems with a written set of principles. Technical but readable.</p>
+    <div class="reading-meta">
+      <span class="tag">Paper</span>
+      <span>Anthropic</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~60 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.anthropic.com/glasswing" target="_blank" rel="noopener">Project Glasswing: Securing Critical Software for the AI Era</a></h3>
+    <p class="reading-blurb">Anthropic&rsquo;s initiative to give defenders of critical infrastructure access to frontier AI &mdash; the clearest public case of how governments and industry are starting to use AI for defensive cybersecurity at scale.</p>
+    <div class="reading-meta">
+      <span class="tag">Policy</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>Anthropic</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~10 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://metr.org/common-elements" target="_blank" rel="noopener">Common Elements of Frontier AI Safety Policies</a></h3>
+    <p class="reading-blurb">METR&rsquo;s comparative analysis of the twelve public frontier AI safety frameworks &mdash; the best starting point for understanding what voluntary AI safety commitments actually say.</p>
+    <div class="reading-meta">
+      <span class="tag">Report</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>METR</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~30 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://policyoptions.irpp.org/2025/09/defence-procurement/" target="_blank" rel="noopener">Canada&rsquo;s Defence Procurement</a></h3>
+    <p class="reading-blurb">On how Canada buys (and mostly fails to buy) the technology it needs &mdash; essential context for AI in national security.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Policy Options &middot; IRPP</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~15 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.europarl.europa.eu/RegData/etudes/BRIE/2025/769580/EPRS_BRI(2025)769580_EN.pdf" target="_blank" rel="noopener">AI and Defence (EU Briefing)</a></h3>
+    <p class="reading-blurb">The European Parliament&rsquo;s own briefing on AI in defence &mdash; clear-eyed on both opportunities and red lines.</p>
+    <div class="reading-meta">
+      <span class="tag">Report</span>
+      <span>European Parliament</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~25 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.institutmontaigne.org/en/expressions/us-foreign-policy-power-age-ai" target="_blank" rel="noopener">US Foreign Policy: Power in the Age of AI</a></h3>
+    <p class="reading-blurb">A thoughtful European read on how AI reshapes American power &mdash; and what it means for middle powers like Canada.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Institut Montaigne</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~18 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.foreignaffairs.com/podcasts/limits-american-way-artificial-intelligence" target="_blank" rel="noopener">The American Way of AI</a></h3>
+    <p class="reading-blurb">A Foreign Affairs conversation on the limits of the American approach to AI and what comes after.</p>
+    <div class="reading-meta">
+      <span class="tag">Podcast</span>
+      <span>Foreign Affairs</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~40 min listen</span>
+    </div>
+  </article>
+</section>
+
+<hr class="section-rule">
+
+<!-- THEME 5 -->
+<section id="law">
+  <h2 class="section-title"><span class="num">Theme 05</span>Law, Regulation &amp; Global Governance</h2>
+  <p class="section-blurb">The EU AI Act, U.S. executive orders, and the search for some form of global coordination. This is the part of AI policy being written into law right now &mdash; and the frameworks Canadian policy makers will have to engage with either way.</p>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.insideprivacy.com/artificial-intelligence/european-commission-launches-consultations-on-the-eu-ai-acts-copyright-provisions-and-ai-regulatory-sandboxes/" target="_blank" rel="noopener">EU AI Act: Copyright Provisions &amp; Regulatory Sandboxes</a></h3>
+    <p class="reading-blurb">A clear summary of how Europe is trying to square copyright with generative AI &mdash; the rules Canadian and U.S. courts are already citing.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Inside Privacy &middot; Covington</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~10 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://artificialintelligenceact.eu/code-of-practice-overview/" target="_blank" rel="noopener">EU AI Code of Practice</a></h3>
+    <p class="reading-blurb">The official overview of the EU&rsquo;s Code of Practice for general-purpose AI models &mdash; what compliance actually looks like.</p>
+    <div class="reading-meta">
+      <span class="tag">Policy</span>
+      <span>European Commission</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~20 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.kennedyslaw.com/en/thought-leadership/article/2026/the-eu-ai-act-implementation-timeline-understanding-the-next-deadline-for-compliance/" target="_blank" rel="noopener">EU AI Act: The August 2026 Enforcement Deadline</a></h3>
+    <p class="reading-blurb">A concise, current guide to what&rsquo;s coming into force in August 2026 &mdash; the moment the EU AI Act gets real teeth for high-risk systems.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>Kennedys Law</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~12 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://law-ai.org/automated-compliance-and-the-regulation-of-ai/" target="_blank" rel="noopener">Automated Compliance and the Regulation of AI</a></h3>
+    <p class="reading-blurb">LawAI on whether the tools that enforce AI rules could themselves be AI &mdash; a genuinely novel regulatory question.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>LawAI</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~20 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://law-ai.org/the-governance-misspecification-problem/" target="_blank" rel="noopener">The Governance Misspecification Problem</a></h3>
+    <p class="reading-blurb">LawAI on why our current AI governance frameworks may be optimizing for the wrong things.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>LawAI</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~25 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://law-ai.org/law-following-ai/" target="_blank" rel="noopener">Law-Following AI</a></h3>
+    <p class="reading-blurb">On building AI systems that follow the law by design &mdash; and what that would actually require.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>LawAI</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~25 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf" target="_blank" rel="noopener">America&rsquo;s AI Action Plan</a></h3>
+    <p class="reading-blurb">The Trump administration&rsquo;s 2025 AI strategy &mdash; the document that&rsquo;s reshaping how the U.S. engages with allies on AI policy.</p>
+    <div class="reading-meta">
+      <span class="tag">Policy</span>
+      <span>The White House</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~45 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.whitehouse.gov/wp-content/uploads/2025/12/2025-National-Security-Strategy.pdf" target="_blank" rel="noopener">U.S. National Security Strategy (2025)</a></h3>
+    <p class="reading-blurb">The companion document to the AI Action Plan. Frames AI, biotech, and quantum as the technologies through which the U.S. intends to &ldquo;drive the world forward&rdquo; &mdash; and the areas where it will lock adversaries out. Essential context for any allied country, including Canada.</p>
+    <div class="reading-meta">
+      <span class="tag">Policy</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>The White House</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~60 min read</span>
+    </div>
+  </article>
+
+</section>
+
+<hr class="section-rule">
+
+<!-- THEME 6: CANADA -->
+<section id="canada">
+  <h2 class="section-title"><span class="num">Theme 06</span>Canada&rsquo;s AI Policy &amp; Digital Sovereignty</h2>
+  <p class="section-blurb">Canada has more AI-policy leverage than most middle powers and less than it thinks. This theme is the live, domestic conversation: what the government is doing, what it isn&rsquo;t, and where the pressure is coming from.</p>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://ised-isde.canada.ca/site/strategic-policy-sector/en/marketplace-framework-policy/consultation-copyright-age-generative-artificial-intelligence-what-we-heard-report" target="_blank" rel="noopener">Canadian Generative AI Consultation: What We Heard</a></h3>
+    <p class="reading-blurb">The federal government&rsquo;s own summary of where Canadian stakeholders stand on copyright and generative AI.</p>
+    <div class="reading-meta">
+      <span class="tag">Report</span>
+      <span>ISED</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~30 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://betakit.com/we-read-every-submission-from-canadas-ai-task-force-heres-what-they-said/" target="_blank" rel="noopener">We Read Every Submission From Canada&rsquo;s AI Task Force: Here&rsquo;s What They Said</a></h3>
+    <p class="reading-blurb">Josh Scott actually read all ~350 pages of task-force submissions (without using AI to summarize). The best unfiltered snapshot of where Canadian industry, academia, and civil society landed on the national AI strategy.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>BetaKit &middot; Josh Scott</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~20 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.teresascassa.ca/index.php?option=com_k2&amp;view=item&amp;id=418:canadas-ai-strategy-some-reflections&amp;Itemid=80" target="_blank" rel="noopener">Canada&rsquo;s AI Strategy: Some Reflections</a></h3>
+    <p class="reading-blurb">Teresa Scassa, one of Canada&rsquo;s sharpest voices on AI and the law, with a careful read of where the national AI strategy succeeds, where it doesn&rsquo;t, and what it says about the country&rsquo;s policy-making muscle.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>teresascassa.ca &middot; Teresa Scassa</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~12 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.theglobeandmail.com/business/commentary/article-the-us-isnt-happy-about-canadas-quest-for-digital-sovereignty/" target="_blank" rel="noopener">The U.S. Isn&rsquo;t Happy About Canada&rsquo;s Quest for Digital Sovereignty</a></h3>
+    <p class="reading-blurb">Michael Geist on the U.S. Trade Representative&rsquo;s new report formally flagging Canadian data-sovereignty rules as a trade barrier &mdash; the most concrete sign yet that digital sovereignty is becoming a live trade-policy fight.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>The Globe and Mail &middot; Michael Geist</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~8 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.theglobeandmail.com/business/commentary/article-big-tech-digital-ai-privacy/" target="_blank" rel="noopener">As U.S. State and Big Tech Become One, We Become Digital Serfs</a></h3>
+    <p class="reading-blurb">Vass Bednar on the Rubio cable instructing American diplomats to push back against foreign data-sovereignty rules &mdash; and why that should alarm Canadian policy makers.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>The Globe and Mail &middot; Vass Bednar</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~8 min read</span>
+    </div>
+  </article>
+</section>
+
+<hr class="section-rule">
+
+<!-- THEME 7 -->
+<section id="road-ahead">
+  <h2 class="section-title"><span class="num">Theme 07</span>The Road Ahead</h2>
+  <p class="section-blurb">Open source, public AI, the frontier of model capabilities, and how public services themselves will change. This is the forward-looking part of the list &mdash; the place to look if you want to think about where we&rsquo;re going, not just where we are.</p>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://sloanreview.mit.edu/article/taking-open-source-into-the-ai-era/" target="_blank" rel="noopener">Taking Open Source Into the AI Era</a></h3>
+    <p class="reading-blurb">MIT Sloan Review on why open source matters for AI and what it takes to do it well.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>MIT Sloan Review</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~15 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.mozillafoundation.org/en/research/library/public-ai/" target="_blank" rel="noopener">What is Public AI?</a></h3>
+    <p class="reading-blurb">Mozilla&rsquo;s research on what a public-interest AI ecosystem could look like. The best available framing on the topic.</p>
+    <div class="reading-meta">
+      <span class="tag">Report</span>
+      <span>Mozilla Foundation</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~30 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://dataconomy.com/2024/10/09/public-ai-mozilla-tells-how-we-should-regulate-ai/" target="_blank" rel="noopener">Bringing Tech Back to the People</a></h3>
+    <p class="reading-blurb">A shorter interview version of the Mozilla public AI argument &mdash; good if you want the ideas in 10 minutes.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Dataconomy</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~10 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.gleech.org/ai2025" target="_blank" rel="noopener">AI in 2025: Gestalt</a></h3>
+    <p class="reading-blurb">A big-picture synthesis of where the frontier ended up in 2025 &mdash; useful as a snapshot to anchor further reading.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Gary Leech</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~40 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://ai-2027.com/" target="_blank" rel="noopener">AI 2027</a></h3>
+    <p class="reading-blurb">A serious scenario-planning exercise from leading AI researchers. You don&rsquo;t have to agree with it to benefit from reading it.</p>
+    <div class="reading-meta">
+      <span class="tag">Report</span>
+      <span>AI Futures Project</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~90 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.blg.com/en/insights/2026/03/a-turning-point-for-ai-in-canada-in-2026" target="_blank" rel="noopener">A Turning Point for AI in Canada in 2026</a></h3>
+    <p class="reading-blurb">A sector-by-sector survey of where Canadian AI policy stands this year &mdash; useful as a recent status check on domestic AI governance.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span class="tag tag-new">New 2026</span>
+      <span>BLG</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~20 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.sciencedirect.com/science/article/pii/S0740624X22000375" target="_blank" rel="noopener">AI in Public Services: When Citizens Accept Its Usage</a></h3>
+    <p class="reading-blurb">Peer-reviewed research on the conditions under which citizens trust AI in public services &mdash; essential if you care about legitimacy.</p>
+    <div class="reading-meta">
+      <span class="tag">Paper</span>
+      <span>Government Information Quarterly</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~45 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://www.oecd.org/en/publications/governing-with-artificial-intelligence_795de142-en/full-report/ai-in-public-service-design-and-delivery_09704c1a.html" target="_blank" rel="noopener">Governing with AI (OECD)</a></h3>
+    <p class="reading-blurb">The OECD&rsquo;s comparative look at how member countries are deploying AI inside government &mdash; a useful benchmark for Canadian policy makers.</p>
+    <div class="reading-meta">
+      <span class="tag">Report</span>
+      <span>OECD</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~60 min read</span>
+    </div>
+  </article>
+
+  <article class="reading">
+    <h3 class="reading-title"><a href="https://apolitical.co/solution-articles/en/ai-and-public-service-evolving-together-165" target="_blank" rel="noopener">AI and Public Service</a></h3>
+    <p class="reading-blurb">A practical overview of how AI is already changing the work of civil servants &mdash; written for public servants themselves.</p>
+    <div class="reading-meta">
+      <span class="tag">Article</span>
+      <span>Apolitical</span>
+      <span class="meta-sep">&middot;</span>
+      <span>~12 min read</span>
+    </div>
+  </article>
+</section>
+
+<hr class="section-rule">
+
+<!-- BOOKS -->
+<section id="books">
+  <h2 class="section-title"><span class="num">Five Books</span>If You Read One Book on AI This Year</h2>
+  <p class="section-blurb">There&rsquo;s no shortage of AI books &mdash; here are the five that I actually recommend, starting with the one I&rsquo;d pick if you can only read one.</p>
+
+  <div class="hero-book">
+    <div class="label">Start with this one</div>
+    <h3>Co-Intelligence</h3>
+    <p class="author">Ethan Mollick &middot; 2024</p>
+    <p>Short, practical, and refreshingly non-hysterical. Mollick &mdash; a Wharton professor who&rsquo;s actually spent time using these tools &mdash; explains what AI means for how you work, think, and learn. If you only read one book on this list, read this one.</p>
+    <div class="links">
+      <a href="https://www.shortform.com/summary/co-intelligence-summary-ethan-mollick" target="_blank" rel="noopener">Shortform summary &rarr;</a>
+      <a href="https://www.blinkist.com/en/books/co-intelligence-en" target="_blank" rel="noopener">Blinkist &rarr;</a>
+      <a href="https://www.amazon.ca/Co-Intelligence-Living-Working-Ethan-Mollick/dp/059371671X" target="_blank" rel="noopener">Amazon.ca &rarr;</a>
+    </div>
+  </div>
+
+  <div class="books-grid">
+    <div class="book-card">
+      <h4>The Alignment Problem</h4>
+      <p class="author">Brian Christian &middot; 2020</p>
+      <div class="links">
+        <a href="https://www.shortform.com/summary/the-alignment-problem-summary-brian-christian" target="_blank" rel="noopener">Shortform</a>
+        <a href="https://www.blinkist.com/en/books/the-alignment-problem-en" target="_blank" rel="noopener">Blinkist</a>
+        <a href="https://www.amazon.ca/Alignment-Problem-Machine-Learning-Values/dp/0393868338" target="_blank" rel="noopener">Amazon</a>
+      </div>
+    </div>
+    <div class="book-card">
+      <h4>Empire of AI</h4>
+      <p class="author">Karen Hao &middot; 2025</p>
+      <div class="links">
+        <a href="https://www.blinkist.com/en/books/empire-of-ai-en" target="_blank" rel="noopener">Blinkist</a>
+        <a href="https://www.amazon.ca/Empire-AI-Dreams-Nightmares-Altmans/dp/0593657500" target="_blank" rel="noopener">Amazon</a>
+      </div>
+    </div>
+    <div class="book-card">
+      <h4>Power and Prediction</h4>
+      <p class="author">Agrawal, Gans &amp; Goldfarb &middot; 2022</p>
+      <div class="links">
+        <a href="https://www.shortform.com/summary/power-and-prediction-summary-ajay-agrawal-joshua-gans-and-avi-goldfarb" target="_blank" rel="noopener">Shortform</a>
+        <a href="https://www.blinkist.com/en/books/power-and-prediction-en" target="_blank" rel="noopener">Blinkist</a>
+        <a href="https://www.amazon.ca/Power-Prediction-Disruptive-Artificial-Intelligence/dp/1647824192" target="_blank" rel="noopener">Amazon</a>
+      </div>
+    </div>
+    <div class="book-card">
+      <h4>The Worlds I See</h4>
+      <p class="author">Fei-Fei Li &middot; 2023</p>
+      <div class="links">
+        <a href="https://www.shortform.com/summary/the-worlds-i-see-summary-fei-fei-li" target="_blank" rel="noopener">Shortform</a>
+        <a href="https://www.amazon.ca/Worlds-See-Curiosity-Exploration-Discovery/dp/1250897939" target="_blank" rel="noopener">Amazon</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED: SOVEREIGN BY DESIGN -->
+<div class="featured-callout">
+  <div class="label">New from the Munk School &middot; March 2026</div>
+  <h3>Sovereign by Design: Strategic Options for Canadian AI Sovereignty</h3>
+  <p>A new report from the AI Competitiveness Project at the Munk School on what AI sovereignty actually means for Canada &mdash; and what the government can do about it while the window for action is still open. Co-authored with <a href="https://seanmullin.ca/" target="_blank" rel="noopener" style="color:#C9A87A; border-bottom:1px solid #C9A87A; text-decoration:none;">Sean Mullin</a>. A good place to go deeper after the list above.</p>
+  <a href="https://aicompetitiveness.ca" target="_blank" rel="noopener" class="cta">Read the report &rarr;</a>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2>About the Curator</h2>
+  <p>I&rsquo;m <a href="https://jaxsonkhan.com" target="_blank" rel="noopener">Jaxson Khan</a>. I&rsquo;m the CEO of <a href="https://apertureai.org" target="_blank" rel="noopener">Aperture AI</a>, a strategy consulting firm working with corporations and governments on AI and emerging technology. I&rsquo;m a Senior Fellow at the <a href="https://munkschool.utoronto.ca" target="_blank" rel="noopener">Munk School of Global Affairs &amp; Public Policy</a> at the University of Toronto, where I co-direct the <a href="https://aicompetitiveness.ca" target="_blank" rel="noopener">AI Competitiveness Project</a> and teach the master&rsquo;s course this reading list is drawn from.</p>
+  <p>Previously I was Senior Policy Advisor to Canada&rsquo;s Minister of Innovation, Science and Industry, where I helped design the <a href="https://ised-isde.canada.ca/site/ised/en/canadian-sovereign-ai-compute-strategy" target="_blank" rel="noopener">$2.4B Canadian Sovereign AI Compute Strategy</a>. Before that, I&rsquo;ve also worked as Chief of Staff at <a href="https://law-ai.org" target="_blank" rel="noopener">LawAI</a> and Director of Growth at <a href="https://makeitfable.com" target="_blank" rel="noopener">Fable</a>.</p>
+  <p>If this list is useful, I&rsquo;d love to know. Find me on <a href="https://www.linkedin.com/in/jaxsonkhan/" target="_blank" rel="noopener">LinkedIn</a> or at <a href="https://jaxsonkhan.com" target="_blank" rel="noopener">jaxsonkhan.com</a>.</p>
+</section>
+
+<!-- SYLLABUS -->
+<div class="syllabus-link">
+  <strong>Want the whole course?</strong><br>
+  This reading list is adapted from <em>PPG2012H: Applied AI Systems and Governance</em>, which I teach each winter at the Munk School. The full syllabus &mdash; with session topics, assignments, and recommended materials &mdash; is open on GitHub.<br>
+  <a href="https://github.com/jaxson/ai-policy-course" target="_blank" rel="noopener">View the full syllabus on GitHub &rarr;</a>
+</div>
+
+<!-- CONTACT -->
+<div class="contact">
+  <strong>Get in touch.</strong> Questions, corrections, or reading suggestions are welcome at <a href="mailto:jaxson.khan@utoronto.ca">jaxson.khan@utoronto.ca</a>.
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Jaxson Khan &middot; Curated from PPG2012H at the Munk School</p>
+  <p>Last updated April 16, 2026</p>
+</footer>
+
+</div>
+
+</body>
+</html>
