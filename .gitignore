@@ -1,0 +1,8 @@
+# Local Netlify folder
+.netlify
+
+# Local dev/preview config
+.claude/
+
+# OG image source template (rendered og-image.png is committed)
+og-image.html
