@@ -1367,7 +1367,7 @@
 <section class="subscribe" id="subscribe">
   <h2>Subscribe for Updates</h2>
   <p class="sub">When this list gets a substantive refresh &mdash; new themes or new readings &mdash; I&rsquo;ll send a short note. No other lists, no spam, easy to unsubscribe.</p>
-  <form class="subscribe-form" name="subscribe" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?subscribed=1">
+  <form class="subscribe-form" name="subscribe" method="POST" netlify data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
     <input type="hidden" name="form-name" value="subscribe">
     <p class="hp"><label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
     <label for="subscribe-email" class="hp">Email address</label>
@@ -1387,16 +1387,6 @@
     var form = document.querySelector('form[name="subscribe"]');
     var status = document.getElementById('subscribe-status');
     if (!form || !status) return;
-
-    // If user came back from a successful submit, show confirmation.
-    if (/[?&]subscribed=1\b/.test(location.search)) {
-      status.textContent = 'Thanks — you\u2019re on the list. Watch for the next refresh.';
-      status.className = 'subscribe-status success';
-      // Clean up the URL so a refresh doesn't repeat the message.
-      if (history.replaceState) {
-        history.replaceState({}, '', location.pathname + location.hash);
-      }
-    }
 
     form.addEventListener('submit', function(e) {
       // Only intercept if fetch is available; otherwise fall back to

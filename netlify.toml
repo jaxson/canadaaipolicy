@@ -1,0 +1,14 @@
+# Netlify build & processing config for canadaaipolicy.com
+# Static HTML site — no build command required.
+
+[build]
+  publish = "."
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true
+
+# Form post-processing must be ON for Netlify to detect <form data-netlify="true">
+# elements at deploy time. (Site Configuration → Forms → Form detection.)
