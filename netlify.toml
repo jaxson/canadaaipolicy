@@ -12,3 +12,10 @@
 
 # Form post-processing must be ON for Netlify to detect <form data-netlify="true">
 # elements at deploy time. (Site Configuration → Forms → Form detection.)
+
+# Repo guidance file, kept in git but not served as a page.
+[[redirects]]
+  from = "/CLAUDE.md"
+  to = "/"
+  status = 404
+  force = true
